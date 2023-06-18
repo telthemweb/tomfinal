@@ -1,0 +1,21 @@
+ #!/usr/bin/env php
+<?php
+
+//bin/doctrine
+
+use Doctrine\ORM\Tools\Console\ConsoleRunner;
+use Doctrine\ORM\Tools\Console\EntityManagerProvider\SingleManagerProvider;
+
+require_once __DIR__ ."/../migrate.php";
+/*
+    |--------------------------------------------------------------------------
+    | Database Connection Name  Author: Innocent Tauzeni wa.we +263 774 914 150 :
+	|               for any error encountered!!
+    |--------------------------------------------------------------------------
+    |
+    | THIS WILL HELP YOU TO RUN COMMANDS
+    | THIS WILL HELP TO CREATE DATABASE TABLES
+    | PLEASE MAKE SURE TO SPECIFY FOLDER WITH MODELS
+    */
+
+ConsoleRunner::run(new SingleManagerProvider($entityManager));
